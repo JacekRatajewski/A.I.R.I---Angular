@@ -1,0 +1,14 @@
+@import "keyframes";
+
+.efx-infinity {
+  color: #999;
+  background: url($infinity-url) repeat 0 0;
+  animation: kfx-scrolling-reverse 0.92s infinite;
+  animation-timing-function: linear;
+}
+
+.efx-gradient {
+  background: linear-gradient(-45deg, #ffffff, #e0e0e0, #dadada, #adadad, #a7a7a7);
+  background-size: 600% 600%;
+  animation: kfx-gradient 25s ease infinite;
+}

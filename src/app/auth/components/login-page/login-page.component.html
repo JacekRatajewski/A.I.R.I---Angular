@@ -1,0 +1,26 @@
+<div class="login-page" [efx]="'infinity'">
+    <div class="login-window">
+        <label>
+            <h1>A.I.R.I</h1>
+            <h5>(Artificial Inteligance with Reactive Information)</h5>
+        </label>
+        <form class="login-form" [formGroup]="loginForm">
+            <div class="login-input">
+                <labeL>
+                    Code:
+                </labeL>
+                <input type="number" formControlName="Code">
+            </div>
+            <div class="login-input">
+                <labeL>
+                    Pass:
+                </labeL>
+                <input type="password" formControlName="Password">
+            </div>
+            <div class="sign">
+                <a (click)="auth()"><button routerLi>Sign in</button></a>
+                <a routerLink="/auth/signUp"><button routerLi>Sign up</button></a>
+            </div>
+        </form>
+    </div>
+</div>

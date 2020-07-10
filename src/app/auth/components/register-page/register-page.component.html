@@ -1,0 +1,35 @@
+<div class="register-page" [efx]="'infinity'">
+  <div class="register-window">
+    <label>
+      <h1>A.I.R.I</h1>
+      <h5>(Artificial Inteligance with Reactive Information)</h5>
+    </label>
+    <form class="register-form" [formGroup]="registerForm">
+      <div class="register-input">
+        <labeL>
+          Name:
+        </labeL>
+        <input type="text" formControlName="Name">
+      </div>
+      <div class="register-input">
+        <labeL>
+          Pass:
+        </labeL>
+        <input type="password" formControlName="Password">
+      </div>
+      <div class="register-input">
+        <labeL>
+          RePass:
+        </labeL>
+        <input type="password" formControlName="RePassword">
+      </div>
+      <div class="sign">
+        <a routerLink="/auth/signIn"><button routerLi>Sign in</button></a>
+        <a (click)="register()"><button routerLi>Sign up</button></a>
+      </div>
+      <div *ngIf="userCode">
+        CODE: {{userCode}}
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+@keyframes kfx-scrolling-reverse {
+  100% {
+    background-position: $infinity-width $infinity-height;
+  }
+}
+
+@keyframes kfx-scrolling {
+  0% {
+    background-position: $infinity-width $infinity-height;
+  }
+}
+
+@keyframes kfx-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// <div class="view">
+//   <div class="plane main">
+//     <div class="circle"></div>
+//     <div class="circle"></div>
+//     <div class="circle"></div>
+//     <div class="circle"></div>
+//     <div class="circle"></div>
+//     <div class="circle"></div>
+//   </div>
+// </div>
+
+// $side: 160px
+// $l: 0px
+// $num: 100
+// $dur: 200s
+
+// @mixin plane($w, $h)
+//   width: $w
+//   height: $h
+//   transform-style: preserve-3d
+
+// @mixin view($p)
+//   position: absolute
+//   top: 0
+//   left: 0
+//   right: 0
+//   bottom: 0
+//   perspective: $p
+
+// @mixin center
+//   position: absolute
+//   top: 0
+//   left: 0
+//   right: 0
+//   bottom: 0
+//   margin: auto
+
+// html, body
+//   background: #fff
+//   overflow: hidden
+//   width: 100%
+//   height: 100%
+
+// .view
+//   @include view(400)
+
+// .plane
+//   @include plane($side, $side)
+
+//   &.main
+//     @include center
+//     transform: rotateX(60deg) rotateZ(-30deg)
+//     animation: rotate 20s infinite linear
+
+//     .circle
+//       width: $side
+//       height: $side
+//       position: absolute
+//       transform-style: preserve-3d
+//       border-radius: 100%
+//       //border: 2px solid white
+//       box-sizing: border-box
+//       box-shadow: 0 0 100px rgba(crimson, 0.5), inset 0 0 30px rgba(crimson, 1)
+
+//       &::before, &::after
+//         content: ''
+//         display: block
+//         @include center
+//         width: 10%
+//         height: 10%
+//         border-radius: 100%
+//         background: rgba(crimson, 0.7)
+//         //border: 4px solid black
+//         box-sizing: border-box
+//         box-shadow: 0 0 100px 0px rgba(crimson, 0.5)
+
+//       &::before
+//         transform: translateZ(-$l)
+//       &::after
+//         transform: translateZ($l)
+
+//       @for $i from 1 through 5
+//         &:nth-child(#{$i})
+//           transform: rotateZ($i / 5 * 360deg) rotateX(63.435deg)
+
+// @keyframes rotate
+//   0%
+//     transform: rotateX(0) rotateY(0) rotateZ(0)
+//   100%
+//     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
